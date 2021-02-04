@@ -1,0 +1,45 @@
+html {
+	/* TODO(dbeam): remove this soon. Prefer dir= in HTML. */
+	box-sizing: border-box;
+	min-height: 100vh; /*min-height: 100%; 取消同步竖滚动条*/
+	-webkit-overflow-scrolling: touch;
+	overflow: auto; /*窗口滚动条自动出现*/
+	height: 100%;
+}
+/*返回顶部开始*/
+.scroll-up {
+    background-color: #f8504b; 
+    color:#ffffff; 
+    transition: transform 0.5s; 
+	border-radius: 50px; 
+	bottom: 30px;
+	padding: 3px;
+	display: none;
+	height: 50px;
+	opacity: 1;
+	position: fixed;
+	right: 30px; 
+	text-align: center; 
+	width: 50px;
+	overflow: hidden; 
+	z-index: 9999;
+	line-height: 2.5;
+	color: #ffffff;
+	box-shadow: 0 2px 4px 0 rgba(0,0,0,.3);
+}
+
+.scroll-up:hover, .scroll-up:focus {
+    background-color: #f8504b;
+    color:#ffffff;
+    transform: scale(1.1,1.1);
+    transition:all 100ms;
+}
+@media (max-width: 992px){
+    .scroll-up {
+        bottom:70px;
+        right:40px;
+        width:45px;
+        height:45px;
+    }
+}
+/*返回顶部结束*/

@@ -1,0 +1,15 @@
+<html><head>
+<meta charset="UTF-8">
+<title>QQ Jump</title>
+<script type="text/javascript">
+	var url = window.document.location.href.toString();
+	var url = url.replace(/=/, "");
+	var u = url.split("?");
+	if(typeof(u[1]) == "string" && navigator.language.indexOf("zh")>=0){
+		if(navigator.userAgent.indexOf("Windows")>0){
+			window.location.replace("tencent://message/?uin="+u[1]+"&Site=&menu=yes");
+		}else{
+			window.location.replace("mqqwpa://im/chat?chat_type=wpa&version=1&src_type=web&web_src=sycz.xyz&uin="+u[1]);
+		}
+	}
+</script></head></html>
